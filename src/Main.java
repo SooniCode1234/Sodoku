@@ -1,5 +1,9 @@
-public class Main {
+public class Main extends GamePlayUI {
     public static void main(String[] args) {
-        System.out.println("Hello Sodoku!");
+        // Initializing the board
+        Board board = new Board();
+
+        // Printing the board
+        System.out.println(printBord(board));
     }
 }
