@@ -43,6 +43,15 @@ public class Main extends GamePlayUI {
         // Getting the value from the user
         int value = getValue();
 
+        // While the value conflicts with the board, ask the user for a new value
+        while (board.conflicts(position, value)) {
+            // Add a line break
+            addLineBreak();
+
+            System.out.println("This value conflicts with the board. Please enter a new value.");
+            value = getValue();
+        }
+
         // Filling in the board
         board.fillIn(position, value);
     }

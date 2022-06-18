@@ -45,4 +45,33 @@ public class Board {
         // Filling in the cell
         board[row][column].setValue(value);
     }
+
+    /**
+     * Method to check if a value conflicts with the board
+     * @param position the position to check around
+     * @param value the value to check
+     * @return true if the value conflicts with the board, false otherwise
+     */
+    public boolean conflicts(Position position, int value) {
+        // Getting the row and column out of the position
+        int row = position.getRow() - 1;
+        int column = position.getColumn() - 1;
+
+        // Checking if the value conflicts with the row
+        for (int i = 0; i < BOARD_SIZE; i++) {
+            if (board[row][i].getValue() == value) {
+                return true;
+            }
+        }
+
+        // Checking if the value conflicts with the column
+
+        for (int i = 0; i < BOARD_SIZE; i++) {
+            if (board[i][column].getValue() == value) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
