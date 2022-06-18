@@ -28,7 +28,7 @@ public class GamePlayUI {
         }
         for(Cell[] row : board.getBoard()) {                          // For each number in the input
             for(Cell cell : row) {                                    //  For each cell in the row
-                r = r.replaceFirst("x", cell.getValue() == 0 ? " " : cell.getValue() + ""); // Replace the 'x' with the cell value
+                r = r.replaceFirst("x", cell.isEmpty() ? " " : cell.getValue() + ""); // Replace the 'x' with the cell value
             }
         }
 

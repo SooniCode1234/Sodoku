@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Add hasValue prop to Cell">
-      <change afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
+    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Create the input UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePlayUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlayUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -75,7 +74,7 @@
       <workItem from="1655420250074" duration="7000000" />
       <workItem from="1655507284860" duration="1714000" />
       <workItem from="1655512584306" duration="3936000" />
-      <workItem from="1655549552635" duration="1616000" />
+      <workItem from="1655549552635" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -98,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655514028824</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create the input UI">
+      <created>1655551363506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655551363506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
     <MESSAGE value="Set up project" />
     <MESSAGE value="Create the board UI" />
     <MESSAGE value="Add hasValue prop to Cell" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add hasValue prop to Cell" />
+    <MESSAGE value="Create the input UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create the input UI" />
   </component>
 </project>

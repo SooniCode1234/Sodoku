@@ -3,7 +3,8 @@
  */
 public class Cell {
     private int value;
-    private boolean hasValue;
+
+    private static final int NULL_VALUE = -1;
 
     /**
      * Constructor for a Cell
@@ -11,14 +12,13 @@ public class Cell {
     */
     public Cell(int value) {
         this.value = value;
-        this.hasValue = true;
     }
 
     /**
      * No argument constructor for a Cell
      */
     public Cell() {
-        this.hasValue = false;
+        this.value = NULL_VALUE;
     }
 
     /**
@@ -35,14 +35,13 @@ public class Cell {
      */
     public void setValue(int value) {
         this.value = value;
-        this.hasValue = true;
     }
 
     /**
-     * Getter for the hasValue of the cell
-     * @return whether the cell has a value or not
+     * Method to check if the cell is empty
+     * @return true if the cell is empty, false otherwise
      */
-    public boolean hasValue() {
-        return hasValue;
+    public boolean isEmpty() {
+        return value == NULL_VALUE;
     }
 }
