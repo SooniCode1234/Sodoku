@@ -18,7 +18,7 @@ public class Board {
                 if (Math.random() < 0.6) {
                     board[i][j] = new Cell((int) (Math.random() * 9) + 1);
                 } else {
-                    board[i][j] = new Cell(0);
+                    board[i][j] = new Cell();
                 }
             }
         }

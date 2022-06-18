@@ -3,6 +3,7 @@
  */
 public class Cell {
     private int value;
+    private boolean hasValue;
 
     /**
      * Constructor for a Cell
@@ -10,6 +11,14 @@ public class Cell {
     */
     public Cell(int value) {
         this.value = value;
+        this.hasValue = true;
+    }
+
+    /**
+     * No argument constructor for a Cell
+     */
+    public Cell() {
+        this.hasValue = false;
     }
 
     /**
@@ -18,5 +27,22 @@ public class Cell {
      */
     public int getValue() {
         return value;
+    }
+
+    /**
+     * Setter for the value of the cell
+     * @param value the new value of the cell
+     */
+    public void setValue(int value) {
+        this.value = value;
+        this.hasValue = true;
+    }
+
+    /**
+     * Getter for the hasValue of the cell
+     * @return whether the cell has a value or not
+     */
+    public boolean hasValue() {
+        return hasValue;
     }
 }
