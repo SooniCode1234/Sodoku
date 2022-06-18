@@ -31,4 +31,18 @@ public class Board {
     public Cell[][] getBoard() {
         return board;
     }
+
+    /**
+     * Method to fill in a cell on the board
+     * @param position the position of the cell to fill in
+     * @param value the value to fill in the cell
+     */
+    public void fillIn(Position position, int value) {
+        // Getting the row and column out of the position
+        int row = position.getRow() - 1;
+        int column = position.getColumn() - 1;
+
+        // Filling in the cell
+        board[row][column].setValue(value);
+    }
 }
