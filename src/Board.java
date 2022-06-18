@@ -74,4 +74,20 @@ public class Board {
 
         return false;
     }
+
+    /**
+     * Method to check if the board is full
+     * @return true if the board is full, false otherwise
+     */
+    public boolean isFull() {
+        for (int i = 0; i < BOARD_SIZE; i++) {
+            for (int j = 0; j < BOARD_SIZE; j++) {
+                if (board[i][j].isEmpty()) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 }

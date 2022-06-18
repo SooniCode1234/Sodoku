@@ -3,14 +3,20 @@ public class Main extends GamePlayUI {
         // Initializing the board
         Board board = new Board();
 
-        // Printing the board
-        System.out.println(printBord(board));
+        while (!board.isFull()) {
+            // Printing the board
+            System.out.println(printBord(board));
 
-        // Asking the user to fill a cell on the board
-        fillIn(board);
+            // Asking the user to fill a cell on the board
+            fillIn(board);
 
-        // Printing the board
-        System.out.println(printBord(board));
+            // Clearing the screen
+            clearScreen();
+        }
+
+        // Saying that the board is full and the game is over
+        System.out.println("The board is full and the game is over!");
+        System.out.println("Congratulations and thank you for playing!");
     }
 
     /*

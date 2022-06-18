@@ -102,4 +102,12 @@ public class GamePlayUI {
     public static void addLineBreak() {
         System.out.println();
     }
+
+    /*
+     * Method to clear the screen
+     */
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }
