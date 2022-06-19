@@ -5,7 +5,7 @@ public class Main extends GamePlayUI {
 
         while (!board.isFull()) {
             // Printing the board
-            System.out.println(printBord(board));
+            System.out.println(printBoard(board));
 
             // Asking the user to fill a cell on the board
             fillIn(board);

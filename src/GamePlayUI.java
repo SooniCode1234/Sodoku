@@ -12,7 +12,7 @@ public class GamePlayUI {
      * Got the game play UI from the following link: https://codegolf.stackexchange.com/questions/126930/draw-a-sudoku-board-using-line-drawing-characters
      * @param board the board to display
      */
-    public static String printBord(Board board) {
+    public static String printBoard(Board board) {
         String P="0121213121213121214",                         // Both lines and rows are repeated according to this pattern.
                 R[]={"╔═╤╦╗","║ │║║x","╟─┼╫╢","╠═╪╬╣","╚═╧╩╝"},  // Characters found on each line.
                 //   (note the 'x')
