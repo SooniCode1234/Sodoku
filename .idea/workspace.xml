@@ -7,7 +7,6 @@
     <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Add the functionality of not letting the user add a number to a filled in spot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,8 @@
       <workItem from="1655420250074" duration="7000000" />
       <workItem from="1655507284860" duration="1714000" />
       <workItem from="1655512584306" duration="3936000" />
-      <workItem from="1655549552635" duration="6549000" />
+      <workItem from="1655549552635" duration="6637000" />
+      <workItem from="1655638141047" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -134,16 +134,5 @@
     <MESSAGE value="Create the input UI" />
     <MESSAGE value="Add the functionality of not letting the user add a number to a filled in spot" />
     <option name="LAST_COMMIT_MESSAGE" value="Add the functionality of not letting the user add a number to a filled in spot" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Board.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

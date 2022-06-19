@@ -12,13 +12,15 @@ public class Board {
     public Board() {
         board = new Cell[BOARD_SIZE][BOARD_SIZE];
 
-        // Initializing 60% of the board with random values
+        // Initializing 60% of the board with random values, including 0
         for (int i = 0; i < BOARD_SIZE; i++) {
             for (int j = 0; j < BOARD_SIZE; j++) {
+                // Creating an empty cell
+                board[i][j] = new Cell();
+
+                // Setting the value of the cell to a random number between 0 and 9, for 60% of the board
                 if (Math.random() < 0.6) {
-                    board[i][j] = new Cell((int) (Math.random() * 9) + 1);
-                } else {
-                    board[i][j] = new Cell();
+                    board[i][j].setValue((int) (Math.random() * 10));
                 }
             }
         }
