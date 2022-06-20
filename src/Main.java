@@ -1,3 +1,6 @@
+/**
+ * A class that is the entry point of the entire game
+ */
 public class Main extends GamePlayUI {
     public static void main(String[] args) {
         // Initializing the board
