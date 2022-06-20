@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Fix the not having 0's on the initial board">
+    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Fix spelling of board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePlayUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlayUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,10 @@
       <workItem from="1655507284860" duration="1714000" />
       <workItem from="1655512584306" duration="3936000" />
       <workItem from="1655549552635" duration="6637000" />
-      <workItem from="1655638141047" duration="1928000" />
+      <workItem from="1655638141047" duration="2110000" />
+      <workItem from="1655663391531" duration="61000" />
+      <workItem from="1655682730511" duration="342000" />
+      <workItem from="1655729657051" duration="4072000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -118,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655638974082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix spelling of board">
+      <created>1655640221030</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655640221030</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +151,7 @@
     <MESSAGE value="Create the input UI" />
     <MESSAGE value="Add the functionality of not letting the user add a number to a filled in spot" />
     <MESSAGE value="Fix the not having 0's on the initial board" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix the not having 0's on the initial board" />
+    <MESSAGE value="Fix spelling of board" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix spelling of board" />
   </component>
 </project>

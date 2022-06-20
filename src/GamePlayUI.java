@@ -13,27 +13,66 @@ public class GamePlayUI {
      * @param board the board to display
      */
     public static String printBoard(Board board) {
-        String P="0121213121213121214",                         // Both lines and rows are repeated according to this pattern.
-                R[]={"╔═╤╦╗","║ │║║x","╟─┼╫╢","╠═╪╬╣","╚═╧╩╝"},  // Characters found on each line.
-                //   (note the 'x')
-                r="";                                            // The string under construction
+        // Both lines and rows are repeated according to this pattern.
+        String P = "0121213121213121214";
 
-        for (int X: P.getBytes()) {                             // For each line,
-            for (int x:                                           //  For each character in the pattern,
-                    P.replace("1",R[X-=48].length()>5?"151":"111")   //    *but* with a cell width of 3,
-                            //    and with an optional character ('x')
-                            .getBytes())
-                r+=R[X].charAt(x-48);                               //   append the real mapped character
-            r+="\n";                                              //  then append a new line
+        // Characters found on each line.
+        String R[] = {"╔═╤╦╗","║ │║║x","╟─┼╫╢","╠═╪╬╣","╚═╧╩╝"};
+
+        // The string under construction
+        String r = "";
+
+        // The row line number
+        int rowLineNumber = 0;
+
+        // Displaying the column numbers
+        for (int i = 0; i < 9; i++) {
+            r += "\t";
+            r += (i + 1) + " ";
         }
-        for(Cell[] row : board.getBoard()) {                          // For each number in the input
-            for(Cell cell : row) {                                    //  For each cell in the row
-                r = r.replaceFirst("x", cell.isEmpty() ? " " : cell.getValue() + ""); // Replace the 'x' with the cell value
+
+        // Adding a line break
+        r += "\n";
+
+        // For each line
+        for (int X: P.getBytes()) {
+            // If it's an odd line, and not the first line
+            if (rowLineNumber != 0 && rowLineNumber % 2 != 0) {
+                // Getting the appropriate line number
+                int line = rowLineNumber / 2 + 1;
+
+                // Adding the line to the string
+                r += line + " ";
+            } else {
+                // Otherwise, add double spaces
+                r += "  ";
+            }
+
+            // Increment the line number
+            rowLineNumber++;
+
+            // For each character in the pattern
+            // With a cell width of 3 and an optional character ('x')
+            for (int x: P.replace("1",R[X-=48].length()>5?"151":"111").getBytes())
+                // Append the real mapped character
+                r+=R[X].charAt(x-48);
+
+            // Add a line break
+            r+="\n";
+        }
+
+        // For each number in the input
+        for(Cell[] row : board.getBoard()) {
+            //  For each cell in the row
+            for(Cell cell : row) {
+                // Replace the 'x' with the cell value
+                r = r.replaceFirst("x", cell.isEmpty() ? " " : cell.getValue() + "");
             }
         }
 
-        //    (or space if zero)
-        return r;                                               // Return the constructed string.
+        // (or space if zero)
+        // Return the constructed string.
+        return r;
     }
 
     /*
