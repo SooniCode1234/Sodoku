@@ -15,11 +15,26 @@ public class Main extends GamePlayUI {
 
             // Clearing the screen
             clearScreen();
+
+            // Checking if the user wants to exit the game
+            if (getExit()) {
+                break;
+            }
         }
 
-        // Saying that the board is full and the game is over
-        System.out.println("The board is full and the game is over!");
-        System.out.println("Congratulations and thank you for playing!");
+        // Checking if the user manually exited the game
+        if (getExit()) {
+            // Clearing the screen
+            clearScreen();
+
+            System.out.println("Exiting the game...");
+            System.out.println("Thank you for playing!");
+        } else {
+            // Saying that the board is full and the game is over
+            System.out.println("The board is full and the game is over!");
+            System.out.println("Congratulations and thank you for playing!");
+        }
+
     }
 
     /*
@@ -27,8 +42,17 @@ public class Main extends GamePlayUI {
      * @param board the board to fill in
      */
     public static void fillIn(Board board) {
+        // Asking the user if they want to quit
+        System.out.println("Do you want to quit? Type 'exit' at any point to quit.");
+
         // Getting the position from the user
         Position position = getPosition();
+
+        // If the position is null, then the user wants to quit
+        if (position == null) {
+            // Break out of the function
+            return;
+        }
 
         // While the position already has a value, ask the user for a new position
         int row = position.getRow() - 1;
@@ -41,6 +65,12 @@ public class Main extends GamePlayUI {
             System.out.println("This position already has a value. Please enter a new position.");
             position = getPosition();
 
+            // If the position is null, then the user wants to quit
+            if (position == null) {
+                // Break out of the function
+                return;
+            }
+
             // Updating the row and column
             row = position.getRow() - 1;
             column = position.getColumn() - 1;
@@ -52,6 +82,12 @@ public class Main extends GamePlayUI {
         // Getting the value from the user
         int value = getValue();
 
+        // If the value is a -1, then the user wants to quit
+        if (value == -1) {
+            // Break out of the function
+            return;
+        }
+
         // While the value conflicts with the board, ask the user for a new value
         while (board.conflicts(position, value)) {
             // Add a line break
@@ -59,6 +95,12 @@ public class Main extends GamePlayUI {
 
             System.out.println("This value conflicts with the board. Please enter a new value.");
             value = getValue();
+
+            // If the value is a -1, then the user wants to quit
+            if (value == -1) {
+                // Break out of the function
+                return;
+            }
         }
 
         // Filling in the board

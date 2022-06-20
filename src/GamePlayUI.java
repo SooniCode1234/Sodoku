@@ -4,8 +4,18 @@ import java.util.Scanner;
  * A class that handles the game play UI
  */
 public class GamePlayUI {
-    public static final String positionRegex = "[1-9]";
-    public static final String valueRegex = "[0-9]";
+    private static final String positionRegex = "[1-9]";
+    private static final String valueRegex = "[0-9]";
+
+    private static boolean exit = false;
+
+    /**
+     * Getter for the exit flag
+     * @return the exit flag
+     */
+    public static boolean getExit() {
+        return exit;
+    }
 
     /*
      * Method to display the game play UI
@@ -87,10 +97,20 @@ public class GamePlayUI {
         System.out.print("Enter the row of the cell you want to fill in: ");
         String row = scanner.nextLine();
 
+        // Checking if the user wants to exit
+        if(checkExit(row)) {
+            return null;
+        }
+
         // Checking if the row is valid
         while(!row.matches(positionRegex)) {
             System.out.print("Invalid row. Please enter a number between 1 and 9: ");
             row = scanner.nextLine();
+
+            // Checking if the user wants to exit
+            if(checkExit(row)) {
+                return null;
+            }
         }
 
         // Add a line break
@@ -100,10 +120,20 @@ public class GamePlayUI {
         System.out.print("Enter the column of the cell you want to fill in: ");
         String column = scanner.nextLine();
 
+        // Checking if the user wants to exit
+        if(checkExit(column)) {
+            return null;
+        }
+
         // Checking if the column is valid
         while(!column.matches(positionRegex)) {
             System.out.print("Invalid column. Please enter a number between 1 and 9: ");
             column = scanner.nextLine();
+
+            // Checking if the user wants to exit
+            if(checkExit(column)) {
+                return null;
+            }
         }
 
         // Converting the row and column to integers
@@ -125,14 +155,42 @@ public class GamePlayUI {
         System.out.print("Enter the value you want to fill in: ");
         String value = scanner.nextLine();
 
+        // Checking if the user wants to exit
+        if(checkExit(value)) {
+            return -1;
+        }
+
         // Checking if the value is valid
         while (!value.matches(valueRegex)) {
             System.out.print("Invalid value. Please enter a number between 0 and 9: ");
             value = scanner.nextLine();
+
+            // Checking if the user wants to exit
+            if(checkExit(value)) {
+                return -1;
+            }
         }
 
         // Converting the value to an integer
         return Integer.parseInt(value);
+    }
+
+    /*
+     * Method to check if the user wants to exit the game
+     * @param userInput the user input
+     */
+    public static boolean checkExit(String userInput) {
+        // If the user input is "exit"
+        if (userInput.equalsIgnoreCase("exit")) {
+            // Set the exit flag to true
+            exit = true;
+
+            // Return true
+            return true;
+        }
+
+        // Return false
+        return false;
     }
 
     /*
