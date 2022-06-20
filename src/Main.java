@@ -37,7 +37,7 @@ public class Main extends GamePlayUI {
 
     }
 
-    /*
+    /**
      * Method to ask the user for a value at a position
      * @param board the board to fill in
      */

@@ -17,7 +17,7 @@ public class GamePlayUI {
         return exit;
     }
 
-    /*
+    /**
      * Method to display the game play UI
      * Got the game play UI from the following link: https://codegolf.stackexchange.com/questions/126930/draw-a-sudoku-board-using-line-drawing-characters
      * @param board the board to display
@@ -85,7 +85,7 @@ public class GamePlayUI {
         return r;
     }
 
-    /*
+    /**
      * Method to ask the user for a position to fill in the board
      * @return the position to fill in the board
      */
@@ -143,7 +143,7 @@ public class GamePlayUI {
         return new Position(rowInt, columnInt);
     }
 
-    /*
+    /**
      * Method to ask the user for a value to fill in the board
      * @return the value to fill in the board
      */
@@ -175,7 +175,7 @@ public class GamePlayUI {
         return Integer.parseInt(value);
     }
 
-    /*
+    /**
      * Method to check if the user wants to exit the game
      * @param userInput the user input
      */
@@ -193,14 +193,14 @@ public class GamePlayUI {
         return false;
     }
 
-    /*
+    /**
      * Method to add a line break
      */
     public static void addLineBreak() {
         System.out.println();
     }
 
-    /*
+    /**
      * Method to clear the screen
      */
     public static void clearScreen() {
