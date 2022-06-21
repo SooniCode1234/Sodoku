@@ -92,14 +92,6 @@ public class Board {
 
         // Checking if the 3x3 grid contains this value
 
-        // Each 3x3 grid is numbered based on every 3 columns and every 3 rows
-        // Ex. Col 1-3 ==> 3x3 grid 1, 4, 7
-
-        // (1, 1) (grid block 0, 0)--> I need to check (0,0) (0,1), (0,2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)
-        // (3, 2) (grid block 1, 0) --> I need to check... ((3 * 1),0) (3,1), (3,2), ((3 * 1) + 1, 0), (4, 1), (4, 2), ((3 * 1) * 2, 0), (5, 1), (5, 2)
-        // 1 / 3 = 0.x or 4 / 3 = 1.x
-
-
         // Divide our sudoku board into 3x3 grids, each grid labeled with it's own x and y coordinate
         // Example: Top row middle column 3x3 grid is block (0, 1)
         // The y coordinate of this cell's 3x3 grid
@@ -114,6 +106,8 @@ public class Board {
                 // Based on the blockX and blockY, we offset the cells we are checking
                 int blockXOffset = (blockX * 3) + i;
                 int blockYOffset = (blockY * 3) + j;
+
+                // Checking if the cell is not null and if the value matches the value we are checking
                 if (board[blockXOffset][blockYOffset] != null && board[blockXOffset][blockYOffset].getValue() == value) {
                     return true;
                 }

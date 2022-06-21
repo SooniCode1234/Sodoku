@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-    </list>
-    <list id="2f452de8-258f-4d3e-a8f5-62762b9acb58" name="Changes by abubakr" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-    </list>
+    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Fix the grid having duplicates in each 3x3 grid" />
+    <list id="2f452de8-258f-4d3e-a8f5-62762b9acb58" name="Changes by abubakr" comment="OOPS. Correct version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,21 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Board.java">
-      <ranges>
-        <range start1="7" end1="7" start2="7" end2="9" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
-        <range start1="14" end1="15" start2="16" end2="20" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
-        <range start1="20" end1="23" start2="25" end2="39" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="48" end1="48" start2="64" end2="65" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="63" end1="64" start2="80" end2="81" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="69" end1="70" start2="86" end2="86" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="71" end1="72" start2="87" end2="88" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="76" end1="76" start2="92" end2="123" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
-        <range start1="84" end1="93" start2="131" end2="132" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,7 +76,7 @@
       <workItem from="1655663391531" duration="61000" />
       <workItem from="1655682730511" duration="342000" />
       <workItem from="1655729657051" duration="7374000" />
-      <workItem from="1655769603233" duration="4884000" />
+      <workItem from="1655769603233" duration="5231000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -161,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655764200922</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix the grid having duplicates in each 3x3 grid">
+      <created>1655775464932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655775464933</updated>
+    </task>
+    <task id="LOCAL-00011" summary="OOPS. Correct version">
+      <created>1655775554438</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655775554438</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +182,9 @@
     <MESSAGE value="Fix spelling of board" />
     <MESSAGE value="Add row &amp; col indicators to board" />
     <MESSAGE value="Fix JavaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix JavaDoc" />
+    <MESSAGE value="Fix the grid having duplicates in each 3x3 grid" />
+    <MESSAGE value="OOPS. Correct version" />
+    <option name="LAST_COMMIT_MESSAGE" value="OOPS. Correct version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
