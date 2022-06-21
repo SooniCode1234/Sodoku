@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class GamePlayUI {
     private static final String positionRegex = "[1-9]";
-    private static final String valueRegex = "[0-9]";
+    private static final String valueRegex = "\\d";
 
     private static boolean exit = false;
 
@@ -19,7 +19,7 @@ public class GamePlayUI {
 
     /**
      * Method to display the game play UI
-     * Got the game play UI from the following link: https://codegolf.stackexchange.com/questions/126930/draw-a-sudoku-board-using-line-drawing-characters
+     * Got the game play UI from the following link: <a href="https://codegolf.stackexchange.com/questions/126930/draw-a-sudoku-board-using-line-drawing-characters">...</a>
      * @param board the board to display
      */
     public static String printBoard(Board board) {
@@ -27,35 +27,35 @@ public class GamePlayUI {
         String P = "0121213121213121214";
 
         // Characters found on each line.
-        String R[] = {"╔═╤╦╗","║ │║║x","╟─┼╫╢","╠═╪╬╣","╚═╧╩╝"};
+        String[] R = {"╔═╤╦╗","║ │║║x","╟─┼╫╢","╠═╪╬╣","╚═╧╩╝"};
 
         // The string under construction
-        String r = "";
+        StringBuilder r = new StringBuilder();
 
         // The row line number
         int rowLineNumber = 0;
 
         // Displaying the column numbers
         for (int i = 0; i < 9; i++) {
-            r += "\t";
-            r += (i + 1) + " ";
+            r.append("\t");
+            r.append(i + 1).append(" ");
         }
 
         // Adding a line break
-        r += "\n";
+        r.append("\n");
 
         // For each line
         for (int X: P.getBytes()) {
-            // If it's an odd line, and not the first line
-            if (rowLineNumber != 0 && rowLineNumber % 2 != 0) {
+            // If it's an odd line
+            if (rowLineNumber % 2 != 0) {
                 // Getting the appropriate line number
                 int line = rowLineNumber / 2 + 1;
 
                 // Adding the line to the string
-                r += line + " ";
+                r.append(line).append(" ");
             } else {
                 // Otherwise, add double spaces
-                r += "  ";
+                r.append("  ");
             }
 
             // Increment the line number
@@ -65,10 +65,10 @@ public class GamePlayUI {
             // With a cell width of 3 and an optional character ('x')
             for (int x: P.replace("1",R[X-=48].length()>5?"151":"111").getBytes())
                 // Append the real mapped character
-                r+=R[X].charAt(x-48);
+                r.append(R[X].charAt(x - 48));
 
             // Add a line break
-            r+="\n";
+            r.append("\n");
         }
 
         // For each number in the input
@@ -76,13 +76,13 @@ public class GamePlayUI {
             //  For each cell in the row
             for(Cell cell : row) {
                 // Replace the 'x' with the cell value
-                r = r.replaceFirst("x", cell.isEmpty() ? " " : cell.getValue() + "");
+                r = new StringBuilder(r.toString().replaceFirst("x", cell.isEmpty() ? " " : cell.getValue() + ""));
             }
         }
 
         // (or space if zero)
         // Return the constructed string.
-        return r;
+        return r.toString();
     }
 
     /**

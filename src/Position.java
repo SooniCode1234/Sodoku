@@ -2,8 +2,8 @@
  * A class that represents a position on the Sudoku board
  */
 public class Position {
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
 
     /**
      * Constructor for a Position

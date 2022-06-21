@@ -2,7 +2,7 @@
  * A class that represents a board of Sudoku
  */
 public class Board {
-    private Cell[][] board;
+    private final Cell[][] board;
 
     private static final int BOARD_SIZE = 9;
 
@@ -92,7 +92,7 @@ public class Board {
 
         // Checking if the 3x3 grid contains this value
 
-        // Divide our sudoku board into 3x3 grids, each grid labeled with it's own x and y coordinate
+        // Divide our sudoku board into 3x3 grids, each grid labeled with its own x and y coordinate
         // Example: Top row middle column 3x3 grid is block (0, 1)
         // The y coordinate of this cell's 3x3 grid
         int blockY = column / 3;

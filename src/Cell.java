@@ -7,14 +7,6 @@ public class Cell {
     private static final int NULL_VALUE = -1;
 
     /**
-     * Constructor for a Cell
-     * @param value the value of the cell
-    */
-    public Cell(int value) {
-        this.value = value;
-    }
-
-    /**
      * No argument constructor for a Cell
      */
     public Cell() {
