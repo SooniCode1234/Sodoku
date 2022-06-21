@@ -23,9 +23,20 @@ public class Board {
                 // Creating an empty cell
                 board[i][j] = new Cell();
 
-                // Setting the value of the cell to a random number between 0 and 9, for 60% of the board
-                if (Math.random() < 0.6) {
-                    board[i][j].setValue((int) (Math.random() * 10));
+                // Setting the value of the cell to a random number between 0 and 9, for about 60% of the board
+                if (Math.random() < 0.6 && cellSet < (0.6 * boardCells)) {
+                    // Setting the value of the cell to a random number between 0 and 9
+                    int value = (int) (Math.random() * 10);
+
+                    // Ensure value does not conflict with the board
+                    while (conflicts(new Position(i + 1, j + 1), value)) {
+                        value = (int) (Math.random() * 10);
+                    }
+
+                    board[i][j].setValue(value);
+
+                    // Incrementing the number of cells set so far
+                    cellSet++;
                 }
             }
         }
@@ -51,6 +62,7 @@ public class Board {
 
         // Filling in the cell
         board[row][column].setValue(value);
+        cellSet++;
     }
 
     /**
@@ -66,18 +78,48 @@ public class Board {
 
         // Checking if the value conflicts with the row
         for (int i = 0; i < BOARD_SIZE; i++) {
-            if (board[row][i].getValue() == value) {
+            if (board[row][i] != null && board[row][i].getValue() == value) {
                 return true;
             }
         }
 
         // Checking if the value conflicts with the column
-
         for (int i = 0; i < BOARD_SIZE; i++) {
-            if (board[i][column].getValue() == value) {
+            if (board[i][column] != null && board[i][column].getValue() == value) {
                 return true;
             }
         }
+
+        // Checking if the 3x3 grid contains this value
+
+        // Each 3x3 grid is numbered based on every 3 columns and every 3 rows
+        // Ex. Col 1-3 ==> 3x3 grid 1, 4, 7
+
+        // (1, 1) (grid block 0, 0)--> I need to check (0,0) (0,1), (0,2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)
+        // (3, 2) (grid block 1, 0) --> I need to check... ((3 * 1),0) (3,1), (3,2), ((3 * 1) + 1, 0), (4, 1), (4, 2), ((3 * 1) * 2, 0), (5, 1), (5, 2)
+        // 1 / 3 = 0.x or 4 / 3 = 1.x
+
+
+        // Divide our sudoku board into 3x3 grids, each grid labeled with it's own x and y coordinate
+        // Example: Top row middle column 3x3 grid is block (0, 1)
+        // The y coordinate of this cell's 3x3 grid
+        int blockY = column / 3;
+
+        // The x coordinate of this cell's 3x3 grid
+        int blockX = row / 3;
+
+        // Checking the 3x3 grid containing this cell
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                // Based on the blockX and blockY, we offset the cells we are checking
+                int blockXOffset = (blockX * 3) + i;
+                int blockYOffset = (blockY * 3) + j;
+                if (board[blockXOffset][blockYOffset] != null && board[blockXOffset][blockYOffset].getValue() == value) {
+                    return true;
+                }
+            }
+        }
+
 
         return false;
     }
