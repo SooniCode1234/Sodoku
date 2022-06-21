@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Remove unnecessary comments">
+    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Final check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePlayUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlayUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <list id="2f452de8-258f-4d3e-a8f5-62762b9acb58" name="Changes by abubakr" comment="OOPS. Correct version" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +85,9 @@
       <workItem from="1655729657051" duration="7374000" />
       <workItem from="1655769603233" duration="5583000" />
       <workItem from="1655776104639" duration="8000" />
-      <workItem from="1655809088999" duration="2699000" />
+      <workItem from="1655809088999" duration="2742000" />
+      <workItem from="1655838319556" duration="266000" />
+      <workItem from="1655838601776" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655776047187</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Final check">
+      <created>1655811841760</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655811841761</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +210,7 @@
     <MESSAGE value="Fix the grid having duplicates in each 3x3 grid" />
     <MESSAGE value="OOPS. Correct version" />
     <MESSAGE value="Remove unnecessary comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary comments" />
+    <MESSAGE value="Final check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final check" />
   </component>
 </project>

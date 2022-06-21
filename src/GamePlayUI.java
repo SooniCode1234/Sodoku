@@ -97,8 +97,8 @@ public class GamePlayUI {
         System.out.print("Enter the row of the cell you want to fill in: ");
         String row = scanner.nextLine();
 
-        // Checking if the user wants to exit
-        if(checkExit(row)) {
+        // Checking if the user wants to exit or reset
+        if(checkExit(row) || checkReset(row)) {
             return null;
         }
 
@@ -107,8 +107,8 @@ public class GamePlayUI {
             System.out.print("Invalid row. Please enter a number between 1 and 9: ");
             row = scanner.nextLine();
 
-            // Checking if the user wants to exit
-            if(checkExit(row)) {
+            // Checking if the user wants to exit or reset
+            if(checkExit(row) || checkReset(row)) {
                 return null;
             }
         }
@@ -120,8 +120,8 @@ public class GamePlayUI {
         System.out.print("Enter the column of the cell you want to fill in: ");
         String column = scanner.nextLine();
 
-        // Checking if the user wants to exit
-        if(checkExit(column)) {
+        // Checking if the user wants to exit or reset
+        if(checkExit(column) || checkReset(column)) {
             return null;
         }
 
@@ -130,8 +130,8 @@ public class GamePlayUI {
             System.out.print("Invalid column. Please enter a number between 1 and 9: ");
             column = scanner.nextLine();
 
-            // Checking if the user wants to exit
-            if(checkExit(column)) {
+            // Checking if the user wants to exit or reset
+            if(checkExit(column) || checkReset(column)) {
                 return null;
             }
         }
@@ -155,8 +155,8 @@ public class GamePlayUI {
         System.out.print("Enter the value you want to fill in: ");
         String value = scanner.nextLine();
 
-        // Checking if the user wants to exit
-        if(checkExit(value)) {
+        // Checking if the user wants to exit or reset
+        if(checkExit(value) || checkReset(value)) {
             return -1;
         }
 
@@ -165,8 +165,8 @@ public class GamePlayUI {
             System.out.print("Invalid value. Please enter a number between 0 and 9: ");
             value = scanner.nextLine();
 
-            // Checking if the user wants to exit
-            if(checkExit(value)) {
+            // Checking if the user wants to exit or reset
+            if(checkExit(value) || checkReset(value)) {
                 return -1;
             }
         }
@@ -178,6 +178,7 @@ public class GamePlayUI {
     /**
      * Method to check if the user wants to exit the game
      * @param userInput the user input
+     * @return true if the user wants to exit, false otherwise
      */
     public static boolean checkExit(String userInput) {
         // If the user input is "exit"
@@ -191,6 +192,19 @@ public class GamePlayUI {
 
         // Return false
         return false;
+    }
+
+    /**
+     * Method to check if the user wants to reset the current inputs
+     * @param userInput the user input
+     * @return true if the user wants to reset, false otherwise
+     */
+    public static boolean checkReset(String userInput) {
+        // If the user input is "reset"
+        // Return true
+        return userInput.equalsIgnoreCase("reset");
+
+        // Return false
     }
 
     /**

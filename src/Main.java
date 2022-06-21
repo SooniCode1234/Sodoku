@@ -45,10 +45,16 @@ public class Main extends GamePlayUI {
         // Asking the user if they want to quit
         System.out.println("Do you want to quit? Type 'exit' at any point to quit.");
 
+        // Asking the user if they want to reset their current inputs
+        System.out.println("Do you want to reset your current inputs? Type 'reset' at any point to reset.");
+
+        // Adding a new line
+        addLineBreak();
+
         // Getting the position from the user
         Position position = getPosition();
 
-        // If the position is null, then the user wants to quit
+        // If the position is null, then the user wants to quit or reset
         if (position == null) {
             // Break out of the function
             return;
@@ -65,7 +71,7 @@ public class Main extends GamePlayUI {
             System.out.println("This position already has a value. Please enter a new position.");
             position = getPosition();
 
-            // If the position is null, then the user wants to quit
+            // If the position is null, then the user wants to quit or reset
             if (position == null) {
                 // Break out of the function
                 return;
@@ -82,7 +88,7 @@ public class Main extends GamePlayUI {
         // Getting the value from the user
         int value = getValue();
 
-        // If the value is a -1, then the user wants to quit
+        // If the value is a -1, then the user wants to quit or reset
         if (value == -1) {
             // Break out of the function
             return;
@@ -96,7 +102,7 @@ public class Main extends GamePlayUI {
             System.out.println("This value conflicts with the board. Please enter a new value.");
             value = getValue();
 
-            // If the value is a -1, then the user wants to quit
+            // If the value is a -1, then the user wants to quit or reset
             if (value == -1) {
                 // Break out of the function
                 return;
