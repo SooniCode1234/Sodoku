@@ -6,13 +6,18 @@ public class Board {
 
     private static final int BOARD_SIZE = 9;
 
+    private int cellSet = 0;
+
     /**
      * Constructor for a Board
      */
     public Board() {
         board = new Cell[BOARD_SIZE][BOARD_SIZE];
 
-        // Initializing 60% of the board with random values, including 0
+        // Getting the number of cells in each row and column
+        int boardCells = BOARD_SIZE * BOARD_SIZE;
+
+        // Initializing about 60% of the board with random values, including 0
         for (int i = 0; i < BOARD_SIZE; i++) {
             for (int j = 0; j < BOARD_SIZE; j++) {
                 // Creating an empty cell
@@ -82,14 +87,6 @@ public class Board {
      * @return true if the board is full, false otherwise
      */
     public boolean isFull() {
-        for (int i = 0; i < BOARD_SIZE; i++) {
-            for (int j = 0; j < BOARD_SIZE; j++) {
-                if (board[i][j].isEmpty()) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
+        return cellSet == BOARD_SIZE * BOARD_SIZE;
     }
 }

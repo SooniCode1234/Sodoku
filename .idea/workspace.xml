@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="Add row &amp; col indicators to board">
-      <change beforePath="$PROJECT_DIR$/src/GamePlayUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlayUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="5dff04cc-fad7-4994-bbe8-872eec74cd53" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+    </list>
+    <list id="2f452de8-258f-4d3e-a8f5-62762b9acb58" name="Changes by abubakr" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Board.java">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="9" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
+        <range start1="14" end1="15" start2="16" end2="20" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
+        <range start1="20" end1="23" start2="25" end2="39" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="48" end1="48" start2="64" end2="65" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="63" end1="64" start2="80" end2="81" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="69" end1="70" start2="86" end2="86" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="71" end1="72" start2="87" end2="88" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="76" end1="76" start2="92" end2="123" changelist="2f452de8-258f-4d3e-a8f5-62762b9acb58" />
+        <range start1="84" end1="93" start2="131" end2="132" changelist="5dff04cc-fad7-4994-bbe8-872eec74cd53" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -35,18 +53,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -77,6 +96,7 @@
       <workItem from="1655663391531" duration="61000" />
       <workItem from="1655682730511" duration="342000" />
       <workItem from="1655729657051" duration="7374000" />
+      <workItem from="1655769603233" duration="4884000" />
     </task>
     <task id="LOCAL-00001" summary="Set up project">
       <created>1655427974633</created>
@@ -134,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655756886726</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix JavaDoc">
+      <created>1655764200922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655764200922</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +187,18 @@
     <MESSAGE value="Fix the not having 0's on the initial board" />
     <MESSAGE value="Fix spelling of board" />
     <MESSAGE value="Add row &amp; col indicators to board" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add row &amp; col indicators to board" />
+    <MESSAGE value="Fix JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix JavaDoc" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Board.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
