@@ -204,8 +204,6 @@ public class GamePlayUI {
         // If the user input is "reset"
         // Return true
         return userInput.equalsIgnoreCase("reset");
-
-        // Return false
     }
 
     /**
