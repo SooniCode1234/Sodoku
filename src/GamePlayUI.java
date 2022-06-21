@@ -21,6 +21,7 @@ public class GamePlayUI {
      * Method to display the game play UI
      * Got the game play UI from the following link: <a href="https://codegolf.stackexchange.com/questions/126930/draw-a-sudoku-board-using-line-drawing-characters">...</a>
      * @param board the board to display
+     * @return the ASCII art of the board
      */
     public static String printBoard(Board board) {
         // Both lines and rows are repeated according to this pattern.
